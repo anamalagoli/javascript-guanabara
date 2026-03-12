@@ -15,13 +15,44 @@
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o resultado</p>
+    <p>Primeiro parágrafo</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div>
-      Clique em mim
+    <div id="msg">
+      Clique em mim </div>
     </div>
     <script>
-      window.document.write('Olá, mundo!')
+     //alterando a cor do primeiro p
+      var p0 = document.getElementsByTagName('p')[0]
+      p0.style.color = 'purple'
+
+      //repetindo a frase do segundo p formatado
+      var p1 = document.getElementsByTagName('p')[1]
+      document.write('No segundo parágrafo está escrito: ' + p1.innerHTML)
+
+      //modificar a cor de plano de fundo
+      var corpo = document.body
+      corpo.style.background = 'pink'
+     
+      /*criar um alerta com a frase do segundo <p> sem a formatação (s/ strong)
+      window.alert(p1.innerText)*/
+
+      /*alteração do fundo e da frase da <div> usando ID
+      var d = document.getElementById('msg')
+      d.style.background = 'green'
+      d.innerText = "Estou aguardando..."*/
+
+      /*alteração do texto da div usando Class
+      var teste = document.getElementsByClassName('msg')[0]
+      teste.innerText = 'Olá, mundo!'*/
+
+      /*alteração do texto da div usando Name
+      var teste = document.getElementsByName('msg')[0]
+      teste.innerText = 'Olá, mundo!'*/
+      
+      //usando o querySlector para alterar a cor de fundo e a frase da div
+      var seletor = document.querySelector('div#msg')
+      seletor.style.background = 'purple'
+      seletor.innerText = "Carregando..."
     </script>
 </body>
 </html>
