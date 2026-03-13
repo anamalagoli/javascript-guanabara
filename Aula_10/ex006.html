@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal; 16pt; arial;
+            background: brown;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()">
         Interaja...
     </div>
+    <script>
+        function clicar(){
+            let area = document.getElementById('clicar()')
+            area.innerText = "Clicou!"
+        }
+    </script>
 </body>
 </html>
