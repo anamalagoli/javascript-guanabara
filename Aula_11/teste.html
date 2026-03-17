@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Você está dirigindo e tem um radar móvel a sua frente, qual velocidade você passaria?</p>
+    <input type="number" name="numbvel" id="numbvel" placeholder="Digite uma velocidade...">
+    <input type="button" value="Enter" onclick="enter()">
+
+    <p id="velocidade">Radar de velocidade: </p>
+    <p id="mensagem"></p>
+    <script>
+        function enter() {
+          let numbvel = document.getElementById('numbvel')
+          let valorvel = Number(numbvel.value)
+          let vel = document.getElementById('velocidade')
+          let msg = document.getElementById('mensagem')
+
+          vel.innerHTML = `Radar de velocidade: ${valorvel} km/h`
+
+          if (valorvel > 60) {
+            msg.innerHTML = ('Você ultrapassou o limite de velocidade! Multado!')
+          } else {
+            msg.innerHTML = ('Boa viagem! Dirija com cinto de segurança.')
+          }
+          }
+    </script>
+</body>
+</html>
