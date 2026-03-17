@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar de Velocidade</title>
+    <title>Document</title>
 </head>
 <body>
-    <p>Você está dirigindo e tem um radar móvel a sua frente, qual velocidade você passaria?</p>
-    <input type="number" name="inpvel" id="inpvel" placeholder="Digite uma velocidade...">
-    <input type="button" value="Enter" onclick="enter()">
-
-    <p id="velocidade">Radar de velocidade: </p>
-    <p id="mensagem"></p>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
     <script>
-        function enter() {
-          let inpvel = document.getElementById('inpvel')
-          let msg = document.getElementById('mensagem')
-          let vel = document.getElementById('velocidade')
-          
-          let valorvel = Number(inpvel.value)
-          
-          vel.innerHTML = `Radar de velocidade: ${valorvel} km/h`
-
-          if (valorvel > 60) {
-            msg.innerHTML = ('Você ultrapassou o limite de velocidade!')
-          } else {
-            msg.innerHTML = ('Boa viagem! Dirija com cuidado.')
-          }
-          }
+        function calcular() {
+            let txtv = document.getElementById('txtvel')
+            let res = document.getElementById('res')
+            let vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+      }
     </script>
+
 </body>
 </html>
