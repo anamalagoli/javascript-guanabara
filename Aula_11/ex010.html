@@ -3,13 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de multas</title>
+    <style>
+        body {
+            font: normal 14px Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #494444;
+        }
+
+        .container {
+            background-color: rgba(0,0,0,0.4);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            width: 500px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        input[type="button"] {
+            margin-left: 5px;
+            cursor: pointer;
+            background-color: #574e53;
+            color: #fff;
+        }
+
+        input[type="button"]:hover {
+            background: #5f555a;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+
     <h1>Sistema de multas</h1>
-    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
-    <input type="button" value="Verificar" onclick="calcular()">
+
+    <p>Velocidade do carro: 
+    
+    <input type="number" name="txtvel" id="txtvel" placeholder="Digite aqui..."> Km/h 
+
+    <input type="button" value="Verificar" onclick="calcular()"> </p>
+
     <div id="res"></div>
+
+    </div>
     <script>
         function calcular() {
             let txtv = document.getElementById('txtvel')
