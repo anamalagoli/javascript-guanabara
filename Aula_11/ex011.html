@@ -4,27 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 14px Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            height: 100vh;
+            margin: 0;
+            color: #494444;
+        }
+
+        .container {
+            background-color: rgba(0,0,0,0.4);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            width: 500px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            width: 50%;
+        }
+
+        input[type="button"] {
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: #574e53;
+            color: #fff;
+        }
+
+        input[type="button"]:hover {
+            background: #5f555a;
+        }
+
+        #res {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .ext {
+            color: #ae2222;
+        }
+    </style>
 </head>
 <body>
-    <h1>Verificar nacionalidade Brasileira</h1>
+    <div class="container">
+        <h1>Verificar nacionalidade Brasileira</h1>
 
-    Qual o país que você nasceu?
+        <p>Qual o país que você nasceu?</p>
 
-    <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="Verificar" onclick="Verificar()">
-
-    <div id="res"></div>
+        <input type="text" name="txtpais" id="txtpais" placeholder="Digite aqui...">
+        <input type="button" value="Verificar" onclick="Verificar()">
+        
+        <div id="res"></div>
+    </div>
 
     <script>
         function Verificar() {
-            let res = document.getElementById('res');
-            let txtpais = document.getElementById('txtpais');
-            let pais = txtpais.value;
+            let res = document.getElementById('res')
+            let txtpais = document.getElementById('txtpais')
+            let pais = txtpais.value.trim().toLowerCase()
 
-            if (pais.toLowerCase() === "brasil") {
-                res.innerHTML = '<p>Você é Brasileiro!</p>';
+            if (pais === "brasil") {
+                res.innerHTML = '<p>Você é Brasileiro! 🇧🇷</p>'
+            } else if (pais === "") {
+                res.innerHTML = '<p class="ext">Por favor, digite um país! 🌍</p>'
             } else {
-                res.innerHTML = '<p>Você é Estrangeiro.</p>';
+                res.innerHTML = '<p>Você é estrangeiro 🌍</p>'
             }
         }
     </script>
