@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso Guanabara</title>
+
   <style>
     * {
       margin: 0;
@@ -11,56 +12,81 @@
       box-sizing: border-box;
     }
 
-    body { 
-      background-color: rgb(202, 202, 249); 
-      color: white; 
-      font: normal 16px Arial; 
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5e6d3, #e8d5c0);
+      color: #4b2e2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      padding-top: 3rem ;
       text-align: center;
     }
 
-    main {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: center;
-    } 
+    h1 {
+      color: #5c3b2e;
+      margin-bottom: 1rem;
+    }
 
-    h1 { 
-      color: rgb(61, 21, 80); 
-      padding: 2rem;
-    } 
+    h4 {
+      color: #7a5c4f;
+      margin-bottom: 1.5rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
 
     a {
       text-decoration: none;
-      color: white;
-      background-color: rgb(61, 21, 80);
+      color: #4b2e2e;
+      background: #fffaf3;
       padding: 1rem;
-      border-radius: 5px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      border: 1px solid #d6c2a8;
     }
 
-    /*Quando passar o mouse muda a cor:*/
     a:hover {
-      background-color: rgb(80, 40, 100);
-    } 
+      background: #a47148;
+      color: white;
+    }
+
+    @media (max-width: 500px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Curso de JavaScript do Guanabara</h1>
+    <h1>Curso de JavaScript</h1>
+    <h4>Exercícios do Guanabara</h4>
   </header>
+
   <main>
-    <h4>Abaixo segue os links de cada exercício</h4>
-    <a href="Aula_04/ex001.html" target="_blank">Aula 04 - Exercício 001</a>
-    <a href="Aula_06/ex002.html" target="_blank">Aula 06 - Exercício 002</a>
-    <a href="Aula_06/ex003.html" target="_blank">Aula 06 - Exercício 003</a> 
-    <a href="Aula_06/ex004.html" target="_blank">Aula 06 - Exercício 004</a>
-    <a href="Aula_09/ex005.html" target="_blank">Aula 09 - Exercício 005</a>
-    <a href="Aula_10/ex006.html" target="_blank">Aula 10 - Exercício 006</a>
-    <a href="Aula_10/ex007.html" target="_blank">Aula 10 - Exercício 007</a>
-    <a href="Aula_11/ex010.html" target="_blank">Aula 11 - Exercício 010</a>
-    <a href="Aula_11/ex011.html" target="_blank">Aula 11 - Exercício 011</a>
-    <a href="Aula_11/teste.html" target="_blank">Aula 11 - Exercício Teste</a>
+    <a href="Aula_04/ex001.html" target="_blank">Aula 04 - Ex 001</a>
+    <a href="Aula_06/ex002.html" target="_blank">Aula 06 - Ex 002</a>
+    <a href="Aula_06/ex003.html" target="_blank">Aula 06 - Ex 003</a> 
+    <a href="Aula_06/ex004.html" target="_blank">Aula 06 - Ex 004</a>
+    <a href="Aula_09/ex005.html" target="_blank">Aula 09 - Ex 005</a>
+    <a href="Aula_10/ex006.html" target="_blank">Aula 10 - Ex 006</a>
+    <a href="Aula_10/ex007.html" target="_blank">Aula 10 - Ex 007</a>
+    <a href="Aula_11/ex010.html" target="_blank">Aula 11 - Ex 010</a>
+    <a href="Aula_11/ex011.html" target="_blank">Aula 11 - Ex 011</a>
+    <a href="Aula_11/teste.html" target="_blank">Aula 11 - Teste</a>
   </main>
 </body>
 </html>
