@@ -6,21 +6,86 @@
     <title>Radar de velocidade</title>
     <style>
       body {
-        background-color: linear-gradient(180deg, #2c3e50, #000000);
+        background: #2c3e50;
         font: normal 16pt Arial, sans-serif;
+        color: white;
         display: flex;
         justify-content: center;
-        
+        align-items: center;
+        margin: 0;
+        height: 100vh;
       }
+
+      .container {
+        background-color: #1c1c1c;
+        padding: 30px;
+        width: 500px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        border: 1px solid #333;
+        border-radius: 15px; 
+      }
+
+      h1 {
+        color: #ff3b3b;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #ccc;
+        font-size: 12pt;
+      }
+
+      input {
+        padding: 10px;
+        margin-top: 1rem;
+        border-radius: 8px;
+        color: white;
+        font-size: 12pt;
+      }
+
+      input[type="number"] {
+        width: 40%;
+        border: 1px solid #444;
+        background: #2b2b2b;
+      }
+
+      input[type="button"] {
+        width: 15%;
+        border: none;
+        background: #ff3b3b;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        background: #cc2f2f;
+      }
+
+      .ok {
+        color: #f1c40f;
+        margin-top: 1.5rem;
+        font-weight: bold;
+      }
+
+      .erro {
+        color: #ff3b3b;
+        margin-top: 1.5rem;
+        font-weight: bold;
+      }
+
     </style>
 </head>
 <body>
-    <p>Você está dirigindo e tem um radar móvel a sua frente, qual velocidade você passaria?</p>
+  <div class="container">
+    <h1>🚨 Radar de velocidade:</h1>
+    <p>Você está dirigindo e tem um radar móvel a sua frente.</p>
+    <p>Qual velocidade você passaria?</p>
     <input type="number" name="numbvel" id="numbvel" placeholder="Digite uma velocidade...">
     <input type="button" value="Enter" onclick="enter()">
 
     <p id="velocidade">Radar de velocidade: </p>
     <p id="mensagem"></p>
+  </div>
     <script>
         function enter() {
           let numbvel = document.getElementById('numbvel')
@@ -32,8 +97,10 @@
 
           if (valorvel > 60) {
             msg.innerHTML = ('Você ultrapassou o limite de velocidade!')
+            msg.className = 'erro'
           } else {
-            msg.innerHTML = ('Boa viagem! Dirija com cuidado.')
+            msg.innerHTML = ('Velocidade segura. Boa viagem!')
+            msg.className = 'ok'
           }
           }
     </script>
