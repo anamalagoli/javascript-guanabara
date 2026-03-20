@@ -51,6 +51,10 @@
         input[type="button"]:hover {
             background: #5f555a;
         }
+
+        .multa {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -64,7 +68,7 @@
 
     <input type="button" value="Verificar" onclick="calcular()"> </p>
 
-    <div id="res"></div>
+    <div id="res">Radar de velocidade: </div>
 
     </div>
     <script>
@@ -72,9 +76,9 @@
             let txtv = document.getElementById('txtvel')
             let res = document.getElementById('res')
             let vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+            res.innerHTML = `<p>Radar de velocidade: Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
             if (vel > 60) {
-                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!`
+                res.innerHTML += `<p>Você está <strong class="multa">MULTADO</strong> por excesso de velocidade!`
             }
             res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
       }
