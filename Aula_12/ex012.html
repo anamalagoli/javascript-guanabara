@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Horas</h1>
+        <input type="number" name="hora" id="hora">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="resultado"></div>
+    </div>
+    <script>
+        function verificar() {
+            let res = document.getElementById('resultado')
+            let txthora = document.getElementById('hora')
+            let hora = txthora.value
+
+            if (hora < 12) {
+                res.innerHTML = 'Bom dia!'
+            } else if (hora <= 18) {
+                res.innerHTML = 'Boa tarde!'
+            } else {
+                res.innerHTML = 'Boa noite!'
+            }
+        }
+    </script>
+</body>
+</html>
