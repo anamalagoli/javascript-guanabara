@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Horas</h1>
+        <div id='atual'></div>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        
+            let res = document.getElementById('resultado')
+            let horas = document.getElementById('atual')
+            let agora = new Date()
+            let hora = agora.getHours()
+            horas.innerHTML = `Agora são exatamente ${hora} horas`
+
+            if (hora < 6) {
+                res.innerHTML = 'Boa madrugada!'
+            } else if (hora < 12) {
+                res.innerHTML = 'Bom dia!'
+            } else if (hora < 18 ) {
+                res.innerHTML = 'Boa tarde!'
+            } else {
+              res.innerHTML = 'Boa noite!'
+            }
+        
+    </script>
+</body>
+</html>
