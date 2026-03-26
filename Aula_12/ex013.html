@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia da semana</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #d7ccc8, #a1887f);
+        }
+
+        main {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #5d4037;
+        }
+
+        #res {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3e2723;
+        }
+    </style>
 </head>
 <body>
-    <div id="res"></div>
+    <main>
+        <h1>Dia da Semana</h1>
+        <div id="res"></div>
+    </main>
     <script>
         let res = document.getElementById('res')
         var agora = new Date()
