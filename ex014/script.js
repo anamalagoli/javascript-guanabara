@@ -5,7 +5,7 @@ function carregar() {
     var hora = data.getHours()
     msg.innerHTML = `Agora são ${hora} horas.`
 
-    if (hora >= 6 && < 12) {
+    if (hora >= 6 && hora < 12) {
         img.src = "fotomanha.png"
         document.body.style.background = "#edeeed"
     } else if (hora < 18) {
