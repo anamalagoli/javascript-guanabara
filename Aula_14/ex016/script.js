@@ -12,9 +12,9 @@ function Enviar() {
     res.innerHTML = ""
 
     for (var c = inicio; c <= fim; c += passo) {
-        res.innerHTML += `${c} 👉 `
+        res.innerHTML += `${c} \u{1F449} `
     }
 
-    res.innerHTML += "fim 🏁"
+    res.innerHTML += "fim \u{1F3C1}"
 }
 
