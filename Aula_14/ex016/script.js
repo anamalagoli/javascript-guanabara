@@ -7,6 +7,29 @@ function Enviar() {
     if (inicio.length == 0 || fim.length == 0 || passo.length == 0) {
         alert('Digite um número válido')
     } else {
-        alert('Tudo OK')
+        let inicio = Number(inicio)
+        let fim = Number(fim)
+        let passo = Number(passo)
+                
+        if (passo <= 0) {
+        alert("Passo Inválido! Considerando passo = 1")
+        passo = 1
+        }
+
+        res.innerHTML = ""
+
+        if (inicio < fim) {
+            //contagem crescente
+            for (var c = inicio; c <= fim; c += passo) {
+                res.innerHTML += `${c} \u{1F449} `
+            }
+        } else { 
+            //contagem descrente
+            for (var c = fim; c <= inicio; c += passo) {
+                res.innerHTML += `${c} \u{1F449} `
+            }
+        }
     }
+
+    res.innerHTML += "fim \u{1F3C1}"
 }
