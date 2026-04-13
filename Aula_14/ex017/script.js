@@ -2,7 +2,7 @@ function Gerar() {
     let tab = document.getElementById('tabuada')
     let num = document.getElementById('txtnum')
 
-    if (num.value.lenght == 0) {
+    if (num.value.length == 0) {
         alert("Por favor, digite um número!")
     } else {
         let n = Number(num.value)
