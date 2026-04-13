@@ -1,5 +1,5 @@
 body {
-  background: rgb(93, 136, 230);
+  background: rgb(219, 170, 200);
   font: normal 15pt Arial;
 }
 
@@ -16,6 +16,9 @@ section {
   margin: auto;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.404); /*3px deslocamento lateral 3px deslocamento vertical 10px espalhamento black cor*/
 }
+ select {
+  width: 5px;
+ }
 
 footer {
   color: white;
