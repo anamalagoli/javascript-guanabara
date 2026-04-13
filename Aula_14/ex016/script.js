@@ -15,7 +15,7 @@ function Enviar() {
 
         if (p <= 0) {
         alert("Passo Inválido! Considerando passo = 1")
-        passo = 1
+        p = 1
         }     
 
         if (i < f) {
@@ -29,7 +29,7 @@ function Enviar() {
                 res.innerHTML += `${c} \u{1F449} `
             }
         }
+        
+        res.innerHTML += "fim \u{1F3C1}"
     }
-
-    res.innerHTML += "fim \u{1F3C1}"
 }
