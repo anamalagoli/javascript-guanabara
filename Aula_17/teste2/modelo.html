@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Pessoas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cadastro de Pessoas</h1>
+
+    <p>
+      Nome:
+      <input type="text" id="nome" placeholder="Digite seu nome">
+    </p>
+
+    <p>
+      Idade:
+      <input type="number" id="idade" placeholder="Digite sua idade">
+    </p>
+
+    <p>
+      Cidade:
+      <input type="text" id="cidade" placeholder="Digite sua cidade">
+    </p>
+
+    <input type="button" value="Enviar" onclick="enviar()">
+
+    <select name="lista" size="5" id="lista"></select>
+
+    <input type="button" value="Finalizar" onclick="finalizar()">
+
+    <div id="res">Aguardando dados do usuário...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

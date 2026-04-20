@@ -6,14 +6,14 @@ function enviar() {
   let cidade = document.getElementById('cidade').value.trim()
   let profissao = document.getElementById('profissao').value.trim()
 
-  // ❌ Validação: campos vazios
+  // Validação: campos vazios
   if (!nome || !idade || !cidade || !profissao) {
     res.innerHTML = "⚠️ Por favor, preencha todos os campos."
     res.style.color = "red"
     return
   }
 
-  // ❌ Validação: idade inválida
+  // Validação: idade inválida
   if (idade <= 0 || idade > 120) {
     res.innerHTML = "⚠️ Idade inválida."
     res.style.color = "red"
