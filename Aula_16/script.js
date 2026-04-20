@@ -66,6 +66,7 @@ function finalizar() {
     }
 }
 
+//botão para limpar tudo
 function limpar() {
     tab.options.length = 0   // limpa o select
     valores = []             // limpa o array
@@ -75,6 +76,7 @@ function limpar() {
     inputnum.focus()
 }
 
+//botão de remover itens do select
 function remover() {
     let selecionado = tab.selectedIndex
 
