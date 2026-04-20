@@ -68,4 +68,7 @@ function limpar() {
     inputnum.focus()
 }
 
+function remover() {
+    
+}
 
