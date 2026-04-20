@@ -4,6 +4,13 @@ let res = document.getElementById('res')
 let tab = document.getElementById('tab')
 let inputnum = document.getElementById('txtnum')
 
+//funcionar com o enter
+inputnum.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        adicionar()
+    }
+})
+
 //funções auxiliares
 function numeroValido(n) {
     return n >= 1 && n <= 100
