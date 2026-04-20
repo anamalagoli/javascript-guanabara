@@ -12,7 +12,7 @@ section {
   background: white;
   border-radius: 10px;
   padding: 15px;
-  width: 90%;
+  width: 600px; /*largura fixa*/
   margin: auto;
   text-align: center;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.404); /*3px deslocamento lateral 3px deslocamento vertical 10px espalhamento black cor*/
@@ -25,8 +25,8 @@ select {
   padding: 5px;
 }
 
-input[type="button"]:hover {
-  background: rgb(90, 180, 105);  /* escurece ao passar o mouse */
+button {
+  cursor: pointer;
 }
 
 footer {
