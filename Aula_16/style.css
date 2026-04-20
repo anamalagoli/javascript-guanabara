@@ -12,7 +12,7 @@ section {
   background: white;
   border-radius: 10px;
   padding: 15px;
-  width: 600px; /*largura fixa*/
+  width: 90%;
   margin: auto;
   text-align: center;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.404); /*3px deslocamento lateral 3px deslocamento vertical 10px espalhamento black cor*/
@@ -23,6 +23,10 @@ select {
   width: 100%;
   border-radius: 8px;
   padding: 5px;
+}
+
+button {
+  cursor: pointer;
 }
 
 footer {
