@@ -51,7 +51,9 @@ function finalizar() {
 }
 
 function limpar() {
-    tab.options.length = 0
+    tab.options.length = 0   // limpa o select
+    valores = []             // limpa o array
+    res.innerHTML = ""       // limpa o resultado (opcional)
 }
 
 
