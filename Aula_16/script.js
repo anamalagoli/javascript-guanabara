@@ -24,14 +24,16 @@ function adicionar() {
 }
 
 function finalizar() {
-    let maior = Math.max(...valores)
-    let menor = Math.min(...valores)
+    let maior = Math.max(...valores) //valor máximo
+    let menor = Math.min(...valores) //valor mínimo
 
+    //somar os valores
     let soma = 0
     for (let pos in valores) {
         soma += valores[pos] /*pegue o valor que está naquela posição*/
     }
 
+    //fazer a média dos valores
     let media = (soma / valores.length).toFixed(2)
 
     res.innerHTML = `<p>Ao todo, temos ${valores.length} números cadastrados.</p>` 
