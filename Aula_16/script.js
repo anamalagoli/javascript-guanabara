@@ -22,13 +22,13 @@ function adicionar() {
     }
     inputnum.value = ""
     inputnum.focus()
-    res.innerHTML = ""
 }
 
 function finalizar() {
     if (valores.length == 0) {
         alert('Adicione valores a lista antes de finalizar!')
     } else {
+        res.innerHTML = ""
         let maior = Math.max(...valores) //valor máximo
         let menor = Math.min(...valores) //valor mínimo
 
