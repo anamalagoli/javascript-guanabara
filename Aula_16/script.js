@@ -69,6 +69,17 @@ function limpar() {
 }
 
 function remover() {
-    
+    let selecionado = tab.selectedIndex
+
+    if (selecionado === -1) {
+        res.innerHTML = `<p style="color:red;">Selecione um item para remover!</p>`
+        return
+    }
+
+    valores.splice(selecionado, 1)   // remove do array na mesma posição
+    tab.remove(selecionado)          // remove do select
+
+    res.innerHTML = ""
+    inputnum.focus()
 }
 
