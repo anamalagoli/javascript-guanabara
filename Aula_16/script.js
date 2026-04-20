@@ -28,7 +28,6 @@ function finalizar() {
     if (valores.length == 0) {
         alert('Adicione valores a lista antes de finalizar!')
     } else {
-        res.innerHTML = ""
         let maior = Math.max(...valores) //valor máximo
         let menor = Math.min(...valores) //valor mínimo
 
@@ -41,7 +40,8 @@ function finalizar() {
         //fazer a média dos valores
         let media = (soma / valores.length).toFixed(2)
 
-        res.innerHTML = `<p>Ao todo, temos ${valores.length} números cadastrados.</p>` 
+        res.innerHTML = ""
+        res.innerHTML += `<p>Ao todo, temos ${valores.length} números cadastrados.</p>` 
         res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>` 
         res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>` 
         res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
