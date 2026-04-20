@@ -22,6 +22,7 @@ function adicionar() {
     }
     inputnum.value = ""
     inputnum.focus()
+    res.innerHTML = ""
 }
 
 function finalizar() {
@@ -40,8 +41,7 @@ function finalizar() {
         //fazer a média dos valores
         let media = (soma / valores.length).toFixed(2)
 
-        res.innerHTML = ""
-        res.innerHTML += `<p>Ao todo, temos ${valores.length} números cadastrados.</p>` 
+        res.innerHTML = `<p>Ao todo, temos ${valores.length} números cadastrados.</p>` 
         res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>` 
         res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>` 
         res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
