@@ -25,10 +25,6 @@ select {
   padding: 5px;
 }
 
-button {
-  cursor: pointer;
-}
-
 footer {
   color: white;
   text-align: center;
