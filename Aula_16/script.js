@@ -20,6 +20,8 @@ function adicionar() {
         item.text = `Valor ${num} adicionado.`
         tab.appendChild(item)
     }
+    inputnum.value = ""
+    inputnum.focus()
     res.innerHTML = ""
 }
 
