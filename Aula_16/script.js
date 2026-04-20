@@ -1,10 +1,10 @@
 let valores = []
 
 let res = document.getElementById('res')
+let tab = document.getElementById('tab')
+let inputnum = document.getElementById('txtnum')
 
 function adicionar() {
-    let tab = document.getElementById('tab')
-    let inputnum = document.getElementById('txtnum')
     let num = Number(inputnum.value)
 
     if (inputnum.value.length == 0) {
@@ -48,6 +48,10 @@ function finalizar() {
         res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
         res.innerHTML += `<p>A média dos valores digitados é  ${media}.</p>`
     }
+}
+
+function limpar() {
+    tab.options.length = 0
 }
 
 
